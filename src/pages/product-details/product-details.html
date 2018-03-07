@@ -1,0 +1,37 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{product.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+     <ion-slides>
+      <ion-slide ng-repeat="let products of productImage">
+        <img [src]="product.productImage">
+        </ion-slide>
+    </ion-slides> 
+
+<ion-card-content>
+  <ion-card-title>
+    {{product.name}} &nbsp;
+    <ion-chip ng-repeat="let products of product">
+      <ion-label color="danger">{{ product.category }}</ion-label>
+      </ion-chip>
+  </ion-card-title>
+  <p [innerHTML]="product.description"></p>
+  <ion-label>specification:</ion-label>
+  <h2>{{product.specification}}</h2>
+  <ion-label>price:</ion-label>
+  <h2>${{product.price}}</h2>
+  <button ion-button icon-left block outline color="danger">
+    <ion-icon name="basket"></ion-icon>Add to Cart
+  </button>
+</ion-card-content> 
+</ion-card>
+
+</ion-content>
