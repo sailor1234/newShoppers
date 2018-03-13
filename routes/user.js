@@ -6,10 +6,12 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user');
  
 router.post("/signup",(req, res, next) =>{
+    
     User.find({email: req.body.email})
  .exec()
  .then(user =>{
-     if(user.lenght >= 1){
+                    
+     if(user.length >= 1){
          res.status(409).json({
              message: "mail exist"
          });
@@ -20,7 +22,8 @@ router.post("/signup",(req, res, next) =>{
                     error: err
                 });
             } else {
-                const user = new User({
+                console.log('test')
+                const newUser = new User({
                     _id:new mongoose.Types.ObjectId(),
                    firstname: req.body.firstname,
                     lastname: req.body.lastname,
@@ -35,7 +38,7 @@ router.post("/signup",(req, res, next) =>{
                     phone: req.body.phone
                 
                 });
-                user
+                newUser
                 .save()
                 .then(result =>{
                     console.log(result);
