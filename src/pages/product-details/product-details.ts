@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams , ModalController, ToastController} from 'ionic-angular';
 import {MenuList} from '../menu-list/menu-list';
 import {Storage} from '@ionic/storage';
+import {Cart} from '../cart/cart';
 
 
 
@@ -26,7 +27,7 @@ export class ProductDetails {
 
   AddToCart(product){
        this.storage.get("cart").then((data)=>{
-         if(data == null || data.lenght == 0){
+         if(data == null || data.length == 0){
            data = [];
            data.push({
              "product": product,
@@ -35,10 +36,9 @@ export class ProductDetails {
            })
          }else{
            let added = 0;
-           for(let i = 0; i < data.lenght; i++){
+           for(let i = 0; i < data.length; i++){
 
              if(product._id == data[i].product._id){
-              console.log("Running for loop");
                console.log("product already exist in the cart");
                let quantity = data[i].quantity;
                data[i].quantity = quantity+1;
@@ -67,8 +67,8 @@ export class ProductDetails {
        });
   }
 
- // openCart(){
-//     this.modalCtrl.create(Cart).present();
-//  };
+  openCart(){
+    this.modalCtrl.create(Cart).present();
+ };
 
 }

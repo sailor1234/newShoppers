@@ -17,28 +17,28 @@
     <ion-item-divider color="primary">personal Information</ion-item-divider>
     <ion-item>
       <ion-label>First Name</ion-label>
-      <ion-input type="text" [(ngModel)]="user_fname"></ion-input>
+      <ion-input type="text" [(ngModel)]="user.fname"></ion-input>
     </ion-item>
     
     
     <ion-item>
       <ion-label>Last Name</ion-label>
-      <ion-input type="text" [(ngModel)]="user_lname"></ion-input>
+      <ion-input type="text" [(ngModel)]="user.lname"></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label>Email</ion-label>
-      <ion-input type="text" [(ngModel)]="user_email"></ion-input>
+      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label>Username</ion-label>
-      <ion-input type="text" [(ngModel)]="user_username"></ion-input>
+      <ion-input type="text" [(ngModel)]="user.username"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label>password</ion-label>
-      <ion-input type="text" [(ngModel)]="user_password"></ion-input>
+      <ion-input type="text" [(ngModel)]="user.password"></ion-input>
     </ion-item>
 
 
@@ -98,14 +98,14 @@
 
     <ion-item *ngIf="!billing_shipping_same">
       <ion-label>Country</ion-label>
-      <ion-select [(ngModel)]="user.shipping_address.country">
+      <ion-select [(ngModel)]="country">
         <ion-option value="Nigeria" selected="false">Nigeria</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item *ngIf="!billing_shipping_same">
       <ion-label>State</ion-label>
-      <ion-select [(ngModel)]="user.shipping_address.state">
+      <ion-select [(ngModel)]="state">
         <ion-option value="kaduna" selected="false">kaduna</ion-option>
         <ion-option value="kano">Kano</ion-option>
         <ion-option value="Abia">Abia</ion-option>
@@ -116,17 +116,17 @@
 
     <ion-item *ngIf="!billing_shipping_same">
       <ion-label>City</ion-label>
-      <ion-input type="text" [(ngModel)]="user.shipping_address.city"></ion-input>
+      <ion-input type="text" [(ngModel)]="city"></ion-input>
     </ion-item>
 
     <ion-item *ngIf="!billing_shipping_same">
       <ion-label>Postal Code</ion-label>
-      <ion-input type="number" [(ngModel)]="user.shipping_address.postalcode"></ion-input>
+      <ion-input type="number" [(ngModel)]="postalcode"></ion-input>
     </ion-item>
 
     <ion-item *ngIf="!billing_shipping_same">
       <ion-label>Phone</ion-label>
-      <ion-input type="tel" [(ngModel)]="user.shipping_address.phone"></ion-input>
+      <ion-input type="tel" [(ngModel)]="phone"></ion-input>
     </ion-item>
 
   </ion-list>

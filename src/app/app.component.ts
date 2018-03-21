@@ -2,17 +2,18 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, Menu } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import {HttpModule} from '@angular/http';
 import { MenuList } from '../pages/menu-list/menu-list';
 import { Signup} from '../pages/signup/signup';
 import {Login} from '../pages/login/login';
+import {Cart} from '../pages/cart/cart';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = MenuList;
+  rootPage: any = Signup;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();

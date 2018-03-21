@@ -10,7 +10,7 @@ import {Signup} from '../pages/signup/signup';
 import {Login} from '../pages/login/login';
 import {ProductsCategory }from '../pages/products-category/products-category';
 import {ProductDetails} from '../pages/product-details/product-details';
-
+import {Cart} from '../pages/cart/cart';
 import {HttpModule} from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 
@@ -24,6 +24,7 @@ import { IonicStorageModule } from '@ionic/storage';
     Login,
     ProductsCategory,
     ProductDetails,
+    Cart,
     
     
   ],
@@ -42,6 +43,7 @@ import { IonicStorageModule } from '@ionic/storage';
     Login,
     ProductsCategory,
     ProductDetails,
+    Cart,
     
   ],
   providers: [
