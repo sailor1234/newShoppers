@@ -17,13 +17,13 @@
     <ion-item-divider color="primary">personal Information</ion-item-divider>
     <ion-item>
       <ion-label>First Name</ion-label>
-      <ion-input type="text" [(ngModel)]="user.fname"></ion-input>
+      <ion-input type="text" [(ngModel)]="user.firstname"></ion-input>
     </ion-item>
     
     
     <ion-item>
       <ion-label>Last Name</ion-label>
-      <ion-input type="text" [(ngModel)]="user.lname"></ion-input>
+      <ion-input type="text" [(ngModel)]="user.lastname"></ion-input>
     </ion-item>
   
     <ion-item>
@@ -63,6 +63,8 @@
         <ion-option value="Abia">Abia</ion-option>
         <ion-option value="Kogi">Kogi</ion-option>
         <ion-option value="Benue">Benue</ion-option>
+        <ion-option value="Benue">Adamawa</ion-option>
+        <ion-option value="Benue">Yola</ion-option>
       </ion-select>
     </ion-item>
 
@@ -78,7 +80,7 @@
 
     <ion-item>
       <ion-label>Phone</ion-label>
-      <ion-input type="tel" [(ngModel)]="user.billing_address.phone"></ion-input>
+      <ion-input type="number" [(ngModel)]="user.billing_address.phone"></ion-input>
     </ion-item>
     
     <!--
@@ -126,7 +128,7 @@
 
     <ion-item *ngIf="!billing_shipping_same">
       <ion-label>Phone</ion-label>
-      <ion-input type="tel" [(ngModel)]="phone"></ion-input>
+      <ion-input type="number" [(ngModel)]="phone"></ion-input>
     </ion-item>
 
   </ion-list>

@@ -18,7 +18,7 @@ app.use(cors());
 app.options('*', cors());
 
 mongoose.connect('mongodb://localhost:27017/myshop');
-//mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 
 // handling cors errors 
 app.use((req, res, next) => {
@@ -69,6 +69,7 @@ const userRoutes = require('./routes/user');
 
 
 // //routes
+require('./routes/user')(app);
 app.use('/uploads',express.static(--__dirname + '/assets'));
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes );

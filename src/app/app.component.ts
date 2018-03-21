@@ -13,7 +13,7 @@ import {Cart} from '../pages/cart/cart';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Signup;
+  rootPage: any = Login;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
