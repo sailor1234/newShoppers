@@ -36,14 +36,16 @@ app.use((req, res, next) => {
 const productRoutes = require('./routes/products');
 const orderRoutes = require('./routes/orders');
 const categoryRoutes = require('./routes/categories');
-const userRoutes = require("./routes/user");
+const userRoutes = require('./routes/user');
+
 
 // //routes
 app.use('/uploads',express.static(--__dirname + '/assets'));
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes );
 app.use('/categories', categoryRoutes);
-app.use("/users", userRoutes);
+app.use('/user', userRoutes);
+
 
 app.use((req, res, next)=>{
     const error = new Error('Not Found');

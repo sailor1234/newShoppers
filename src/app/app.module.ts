@@ -10,7 +10,9 @@ import {Signup} from '../pages/signup/signup';
 import {Login} from '../pages/login/login';
 import {ProductsCategory }from '../pages/products-category/products-category';
 import {ProductDetails} from '../pages/product-details/product-details';
+
 import {HttpModule} from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage';
 
 
 @NgModule({
@@ -21,13 +23,15 @@ import {HttpModule} from '@angular/http';
     Signup,
     Login,
     ProductsCategory,
-    ProductDetails
+    ProductDetails,
+    
     
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,7 +41,8 @@ import {HttpModule} from '@angular/http';
     Signup,
     Login,
     ProductsCategory,
-    ProductDetails
+    ProductDetails,
+    
   ],
   providers: [
     StatusBar,

@@ -9,6 +9,11 @@
 
 
 <ion-content>
+<ion-fab right top edge (click)="openCart()">
+  <button ion-fab color="danger"><ion-icon name="cart"></ion-icon></button>
+
+</ion-fab>
+
   <ion-card>
      <ion-slides>
       <ion-slide ng-repeat="let products of productImage">
@@ -28,7 +33,7 @@
   <h2>{{product.specification}}</h2>
   <ion-label>price:</ion-label>
   <h2>${{product.price}}</h2>
-  <button ion-button icon-left block outline color="danger">
+  <button ion-button icon-left block outline color="danger" (click)="AddToCart(product)">
     <ion-icon name="basket"></ion-icon>Add to Cart
   </button>
 </ion-card-content> 
